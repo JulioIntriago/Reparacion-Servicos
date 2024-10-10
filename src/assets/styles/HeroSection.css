@@ -1,0 +1,84 @@
+.hero-section {
+  display: flex;
+  justify-content: space-between; /* Distribuye el texto y la imagen en filas */
+  align-items: center; /* Alinea verticalmente en el centro */
+  padding: 3rem 2rem;
+  background-color: #f0f0f0;
+  text-align: left;
+  flex-wrap: nowrap; /* Asegúrate de que no se apilen en pantallas grandes */
+}
+
+.hero-content {
+  max-width: 50%; /* El contenido de texto ocupará el 50% */
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero-title span {
+  color: #6A0DAD;
+  display: block;
+}
+
+.small-text {
+  font-size: 1.2rem;
+  color: #7d7d7d;
+  margin-bottom: 2rem;
+}
+
+.button-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.primary-button {
+  padding: 1rem 2rem;
+  background-color: #6A0DAD;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.secondary-button {
+  color: #999;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-image-container {
+  max-width: 45%; /* Ajusta el ancho de la imagen */
+  display: flex;
+  justify-content: flex-end; /* Coloca la imagen a la derecha */
+}
+
+.hero-image {
+  width: 80%; /* Ajusta el tamaño de la imagen */
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column; /* Cambia a disposición vertical */
+    text-align: center;
+  }
+
+  .hero-content, .hero-image-container {
+    max-width: 100%;
+  }
+
+  .hero-image {
+    margin-top: 2rem;
+  }
+}
