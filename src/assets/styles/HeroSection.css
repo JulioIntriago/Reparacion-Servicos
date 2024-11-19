@@ -1,15 +1,15 @@
 .hero-section {
   display: flex;
-  justify-content: space-between; /* Distribuye el texto y la imagen en filas */
-  align-items: center; /* Alinea verticalmente en el centro */
+  justify-content: space-between;
+  align-items: center;
   padding: 3rem 2rem;
   background-color: #f0f0f0;
-  text-align: left;
-  flex-wrap: nowrap; /* Asegúrate de que no se apilen en pantallas grandes */
+  flex-wrap: wrap; /* Permite que los elementos se apilen en pantallas pequeñas */
 }
 
 .hero-content {
-  max-width: 50%; /* El contenido de texto ocupará el 50% */
+  max-width: 48%;
+  text-align: left;
 }
 
 .hero-title {
@@ -21,13 +21,12 @@
 }
 
 .hero-title span {
-  color: #6A0DAD;
-  display: block;
+  color: #1F6E8C;
 }
 
 .small-text {
   font-size: 1.2rem;
-  color: #7d7d7d;
+  color: #474242;
   margin-bottom: 2rem;
 }
 
@@ -39,13 +38,18 @@
 
 .primary-button {
   padding: 1rem 2rem;
-  background-color: #6A0DAD;
+  background-color: #0E2954;
   color: #fff;
   border: none;
   border-radius: 10px;
   font-size: 1.1rem;
   cursor: pointer;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.primary-button:hover {
+  background-color: #0C1E4B;
 }
 
 .secondary-button {
@@ -56,13 +60,14 @@
 }
 
 .hero-image-container {
-  max-width: 45%; /* Ajusta el ancho de la imagen */
+  max-width: 48%;
   display: flex;
-  justify-content: flex-end; /* Coloca la imagen a la derecha */
+  justify-content: flex-end;
 }
 
 .hero-image {
-  width: 80%; /* Ajusta el tamaño de la imagen */
+  width: 100%;
+  max-width: 400px;
   height: auto;
   border-radius: 10px;
 }
@@ -70,15 +75,18 @@
 /* Responsivo para pantallas pequeñas */
 @media (max-width: 768px) {
   .hero-section {
-    flex-direction: column; /* Cambia a disposición vertical */
+    flex-direction: column;
     text-align: center;
+    padding: 2rem 1rem;
   }
 
-  .hero-content, .hero-image-container {
+  .hero-content,
+  .hero-image-container {
     max-width: 100%;
   }
 
   .hero-image {
     margin-top: 2rem;
+    width: 80%;
   }
 }

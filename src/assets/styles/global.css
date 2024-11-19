@@ -1,38 +1,15 @@
-/* Global styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #e9e1e1;
-    color: #333;
-    margin: 0;
-  }
-  
-  .container {
-    width: 90%;
-    margin: 0 auto;
-  }
-  
-  @media (min-width: 768px) {
-    .container {
-      width: 80%;
-    }
-  }
-  
-  @media (min-width: 1024px) {
-    .container {
-      width: 70%;
-    }
-  }
-  
-  /* Imágenes para que nunca se expandan más que su contenedor */
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: visible; /* Asegura que los menús no queden ocultos */
+  position: initial; /* Evita que restrinja elementos hijos posicionados */
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #e9e1e1;
+  color: #333;
+  margin: 0;                        /* Asegura que no haya margen en el body */
+}

@@ -1,20 +1,17 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
-import HeroSection from '../components/HeroSection';
-import FeaturesSection from '../components/FeaturesSection';
-import CTASection from '../components/CTASection';
-import Footer from '../components/Footer';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';  // Importa tu página Home
+import Login from './pages/Login'; // Importa tu página Login
 
-function Home() {
+function App() {
   return (
-    <div>
-      <Navbar />
-      <HeroSection />
-      <FeaturesSection />
-      <CTASection />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} /> {/* Página principal */}
+        <Route path="/login" element={<Login />} /> {/* Página de inicio de sesión */}
+      </Routes>
+    </Router>
   );
 }
 
-export default Home;
+export default App;

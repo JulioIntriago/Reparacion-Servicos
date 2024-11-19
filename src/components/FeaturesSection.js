@@ -1,14 +1,15 @@
 import React from 'react';
-import '../assets/styles/FeaturesSection.css'; // Importa los estilos desde el archivo CSS
+import { FaTasks, FaBox, FaUsers, FaTruck, FaWrench, FaDollarSign } from 'react-icons/fa'; // Importa los íconos de React Icons
+import '../assets/styles/FeaturesSection.css'; // Importa los estilos
 
 function FeaturesSection() {
   const features = [
-    { title: "Órdenes de trabajo", description: "Administra y notifica a tus clientes." },
-    { title: "Inventario", description: "Actualiza tu inventario automáticamente." },
-    { title: "Clientes", description: "Gestión de contactos e historial." },
-    { title: "Proveedores", description: "Registra y administra proveedores." },
-    { title: "Servicios", description: "Registra servicios a la medida." },
-    { title: "Finanzas", description: "Administra tus finanzas con reportes." },
+    { icon: <FaTasks />, title: "Órdenes de trabajo", description: "Administra y notifica a tus clientes." },
+    { icon: <FaBox />, title: "Inventario", description: "Actualiza tu inventario automáticamente." },
+    { icon: <FaUsers />, title: "Clientes", description: "Gestión de contactos e historial." },
+    { icon: <FaTruck />, title: "Proveedores", description: "Registra y administra proveedores." },
+    { icon: <FaWrench />, title: "Servicios", description: "Registra servicios a la medida." },
+    { icon: <FaDollarSign />, title: "Finanzas", description: "Administra tus finanzas con reportes." },
   ];
 
   return (
@@ -17,6 +18,7 @@ function FeaturesSection() {
       <div className="features-grid">
         {features.map((feature, index) => (
           <div key={index} className="feature-item">
+            <div className="feature-icon">{feature.icon}</div> {/* Icono agregado */}
             <h3>{feature.title}</h3>
             <p>{feature.description}</p>
           </div>
