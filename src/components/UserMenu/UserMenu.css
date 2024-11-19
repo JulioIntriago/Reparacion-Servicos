@@ -1,0 +1,48 @@
+/* src/components/UserMenu/UserMenu.css */
+.user-menu {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* Aparece justo debajo del nombre */
+  right: 0;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1500; /* Asegura que esté encima */
+  width: 200px;
+}
+
+.menu-item {
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #333;
+  transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+  background-color: #f4f4f4;
+}
+
+/* src/components/NotificationMenu/NotificationMenu.css */
+.notification-menu {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* Aparece justo debajo del icono */
+  right: 0;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1500; /* Asegura que esté encima */
+  width: 200px;
+}

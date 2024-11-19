@@ -1,0 +1,80 @@
+/* Contenedor principal del menú de notificaciones */
+.notification-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 1000; /* Asegura que el menú esté sobre otros elementos */
+}
+
+/* Icono de notificación */
+.icon {
+  font-size: 1.5rem;
+  color: #1F6E8C;
+  cursor: pointer;
+}
+
+/* Menú desplegable */
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 40px; /* Justo debajo del icono */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  width: 250px;
+  z-index: 1100; /* Mayor que otros elementos */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(-10px);
+}
+
+/* Muestra el menú cuando está abierto */
+.dropdown-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Estilo del encabezado del menú */
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Botón para limpiar notificaciones */
+.clear-icon {
+  font-size: 0.85rem;
+  color: #999;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.clear-icon:hover {
+  color: #1F6E8C;
+}
+
+/* Elemento individual de notificación */
+.notification-item {
+  padding: 8px;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.notification-item:hover {
+  background-color: #e0e9f3; /* Color de hover */
+}
+
+.notification-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #333;
+}

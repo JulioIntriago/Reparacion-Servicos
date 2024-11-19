@@ -1,0 +1,137 @@
+/* src/pages/WelcomePage/WelcomePage.css */
+
+.welcome-page {
+  background-color: #f4f8fb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.welcome-content {
+  max-width: 900px; /* Ajustado para que sea más ancho */
+  width: 100%;
+  padding: 40px;
+  margin-top: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h1 {
+  color: #19376D;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.steps-indicator {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 0;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #b0bec5;
+  font-size: 1.1rem;
+}
+
+.step.active {
+  color: #19376D;
+  font-weight: bold;
+}
+
+.step-icon {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+
+.form-container {
+  padding: 25px;
+}
+
+button {
+  background-color: #1A73E8;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0f5bb5;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: #19376D;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #d1d9e0;
+  border-radius: 5px;
+  outline-color: #19376D;
+}
+
+.checkbox-group label {
+  color: #19376D;
+}
+
+.continue-button {
+  background-color: #19376D;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 6px 12px; /* Reduce padding para hacer el botón más pequeño */
+  border-radius: 5px;
+  font-size: 0.9rem; /* Tamaño de fuente reducido */
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.continue-button:hover {
+  background-color: #1355d1ab;
+}
+
+
+@media (max-width: 768px) {
+  .welcome-content {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .steps-indicator {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .step-icon {
+    font-size: 1.5rem;
+  }
+}

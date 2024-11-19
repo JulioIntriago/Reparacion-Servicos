@@ -1,0 +1,227 @@
+/* Estructura principal del Dashboard */
+.dashboard-content {
+  padding: 20px;
+  background-color: #f0f4f8; /* Fondo azul claro */
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Sección de las tarjetas de estado */
+.status-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.status-header {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #0E2954; /* Azul oscuro */
+  font-weight: bold;
+}
+
+.status-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.status-card {
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 2px solid #e8e9e9; /* Azul vibrante */
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #6b6b6b;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.status-card:hover {
+  background-color: #e9f2fb; /* Azul claro en hover */
+  border-color: #0E2954; /* Azul oscuro */
+}
+
+.status-icon {
+  font-size: 2rem;
+  color: #1a73e8; /* Azul vibrante */
+  margin-bottom: 10px;
+}
+
+/* Sección de ventas y gráfico */
+.chart-and-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #e4e4e4;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.chart-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart-container canvas {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+/* Estilos para la sección de ventas */
+.sales-summary {
+  width: 45%;
+  text-align: center;
+}
+
+.sales-summary h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #0E2954;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .chart-and-summary {
+    flex-direction: column;
+  }
+
+  .chart-container,
+  .sales-summary {
+    width: 100%;
+  }
+
+  .chart-container canvas {
+    max-width: 300px;
+  }
+}
+
+/* Botones de intervalo de tiempo */
+.time-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.time-buttons button {
+  background-color: #ffffff;
+  border: 1px solid #1f2f8c;
+  padding: 10px 15px;
+  margin: 0 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.time-buttons button.active {
+  background-color: #1b198aef;
+  color: #ffffff;
+}
+
+.time-buttons button:hover {
+  background-color: #e0e9f3; /* Azul claro en hover */
+}
+
+/* Botón de cerrar día */
+.close-day-button {
+  margin-top: 10px;
+  background-color: #ffffff;
+  border: 1px solid #1F6E8C;
+  color: #1F6E8C;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+
+.close-day-button:hover {
+  background-color: #1F6E8C;
+  color: #ffffff;
+}
+
+/* Tabla de Órdenes */
+.orders-table {
+  margin-top: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 2px solid #1F6E8C;
+  padding: 20px;
+  overflow-x: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.orders-table h4 {
+  margin-bottom: 15px;
+  color: #0E2954;
+  font-weight: bold;
+}
+
+.orders-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.orders-table th {
+  background-color: #f0f4f8;
+  font-weight: bold;
+}
+
+.orders-table tr:hover {
+  background-color: #f4f4f4;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .status-cards {
+    flex-direction: column;
+  }
+
+  .status-card {
+    margin: 10px 0;
+  }
+
+  .chart-and-summary {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .chart-container {
+    width: 100%;
+  }
+
+  .sales-summary {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .orders-table {
+    padding: 10px;
+  }
+
+  .orders-table table {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,132 @@
+/* src/pages/WelcomePage/StepBusinessDetails.css */
+
+/* Contenedor principal del formulario de negocio */
+.step-container {
+    max-width: 800px; /* Anchura máxima del contenedor */
+    margin: 0 auto; /* Centrado horizontal */
+    background-color: #fff; /* Fondo blanco */
+    padding: 30px; /* Espacio interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera para darle profundidad */
+    font-family: 'Poppins', sans-serif; /* Fuente general */
+}
+ 
+/* Título principal del formulario */
+h2 {
+    font-size: 1.8rem; /* Tamaño de fuente */
+    color: #0E2954; /* Color azul oscuro */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Filas que agrupan los campos en una misma línea */
+.form-row {
+    display: flex; /* Disposición en línea */
+    gap: 20px; /* Espacio entre columnas */
+    margin-bottom: 20px; /* Espacio inferior entre filas */
+}
+
+/* Grupo de cada campo de entrada */
+.form-group {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo del texto del label */
+label {
+    font-size: 1rem; /* Tamaño de fuente */
+    color: #555; /* Color de texto gris */
+    margin-bottom: 5px; /* Espacio inferior */
+}
+
+/* Estilos para los campos de entrada y áreas de selección */
+input[type="text"],
+input[type="tel"],
+input[type="file"],
+select,
+textarea {
+    padding: 8px; /* Espacio interno del campo */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+}
+
+/* Efecto visual al hacer foco en el campo */
+input[type="text"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #1A73E8; /* Cambia el color del borde a azul en foco */
+    box-shadow: 0 0 5px rgba(26, 115, 232, 0.2); /* Sombra ligera en foco */
+}
+
+/* Contenedor de los campos de teléfono */
+.phone-input {
+    display: flex;
+    gap: 5px; /* Espacio entre el código de país y el número */
+}
+
+/* Ancho específico para el selector del código de país */
+.country-code {
+    width: 80px;
+}
+
+/* Área de texto para la dirección */
+textarea {
+    min-height: 80px; /* Altura mínima */
+    resize: vertical; /* Permite al usuario cambiar la altura */
+}
+
+/* Sección de impuestos */
+.tax-section {
+    margin-top: 30px; /* Espacio superior */
+}
+
+/* Título de la sección de impuestos */
+.tax-section h3 {
+    font-size: 1.2rem; /* Tamaño de fuente */
+    color: #0E2954; /* Color azul oscuro */
+    margin-bottom: 10px;
+}
+
+/* Texto de descripción de la sección de impuestos */
+.tax-section p {
+    color: #666; /* Texto gris */
+    margin-bottom: 10px;
+}
+
+/* Estilos para el botón de creación de impuestos */
+.create-button {
+    background-color: #1a73e8; /* Color de fondo azul */
+    color: white; /* Texto blanco */
+    border: none;
+    padding: 8px 12px; /* Espacio interno reducido */
+    font-size: 0.9rem; /* Tamaño de fuente reducido */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Indica que es clickeable */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Cambia el color del botón al pasar el ratón */
+.create-button:hover {
+    background-color: #5275d6;
+}
+
+/* Estilos para el botón de continuar */
+.continue-button {
+    background-color: #1a73e8; /* Fondo azul */
+    color: white; /* Texto blanco */
+    border: none;
+    padding: 8px 20px; /* Espacio interno reducido */
+    font-size: 0.9rem; /* Tamaño de fuente reducido */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave */
+    float: right; /* Alineación a la derecha */
+    margin-top: 20px; /* Espacio superior */
+}
+
+/* Cambia el color del botón al pasar el ratón */
+.continue-button:hover {
+    background-color: #5275d6;
+}

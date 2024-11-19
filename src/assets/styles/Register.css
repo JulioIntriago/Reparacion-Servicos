@@ -1,0 +1,122 @@
+/* Contenedor general del formulario de registro */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 100px 20px 20px;
+  background-color: #f4f4f9;
+  box-sizing: border-box;
+}
+
+/* Caja del formulario */
+.register-box {
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+}
+
+/* Título del formulario */
+.register-box h2 {
+  color: #184c9e;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+/* Grupo de formulario para cada campo */
+.form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* Estilo de los campos de entrada */
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #0E2954;
+  box-shadow: 0 0 8px rgba(14, 41, 84, 0.2);
+  outline: none;
+}
+
+/* Botón de registro */
+.register-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #1A73E8;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  margin-top: 1rem;
+}
+
+.register-button:hover {
+  background-color: #0F5BB5;
+}
+
+.register-button:active {
+  transform: scale(0.98);
+}
+
+/* Contenedor de términos y condiciones */
+.terms-group {
+  display: flex;
+  align-items: flex-start;  /* Alinea checkbox y texto al inicio */
+  gap: 8px;                 /* Espacio entre checkbox y texto */
+  font-size: 0.85rem;       /* Reduce el tamaño de fuente */
+  color: #666;
+}
+
+.terms-group input[type="checkbox"] {
+  margin-top: 2px;          /* Ajusta la posición vertical del checkbox */
+  transform: scale(1);      /* Mantiene el tamaño original del checkbox */
+}
+
+.terms-text a {
+  color: #1A73E8;
+  text-decoration: none;
+}
+
+.terms-text a:hover {
+  text-decoration: underline;
+}
+
+/* Texto del enlace de inicio de sesión */
+.login-link {
+  display: block;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.login-link:hover {
+  color: #0E2954;
+  text-decoration: underline;
+}

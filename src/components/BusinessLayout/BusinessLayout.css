@@ -1,0 +1,67 @@
+/* src/components/BusinessLayout/BusinessLayout.css */
+
+.business-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f0f4f8; /* Fondo suave para el layout */
+}
+
+.content-wrapper {
+  display: flex;
+  flex: 1;
+}
+
+.business-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff; /* Fondo blanco para el área de contenido */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  border-radius: 10px;
+  margin: 20px; /* Margen alrededor del contenido */
+  transition: margin-left 0.3s ease, padding 0.3s ease; /* Transición para cambios suaves */
+}
+
+.sidebar-closed .business-content {
+  margin-left: 0;
+}
+
+.business-sidebar {
+  width: 250px;
+  background-color: #e9f2fb; /* Fondo azul claro para el sidebar */
+  transition: width 0.3s ease, padding 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para el sidebar */
+}
+
+.business-sidebar.collapsed {
+  width: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.business-sidebar.collapsed .business-content {
+  padding: 10px; /* Reduce el padding del contenido cuando el sidebar está colapsado */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .business-layout {
+    flex-direction: column;
+  }
+
+  .business-sidebar {
+    position: absolute;
+    z-index: 1000;
+    height: 100%;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .business-content {
+    margin: 0;
+    border-radius: 0;
+    padding: 15px;
+  }
+}

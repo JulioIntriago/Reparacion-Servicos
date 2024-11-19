@@ -1,0 +1,89 @@
+/* Estilos generales del sidebar */
+.sidebar {
+  background-color: #f7f7f7; /* Fondo gris claro */
+  height: 100vh;
+  width: 250px;
+  position: fixed;
+  transition: width 0.3s ease;
+  padding-top: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Sidebar cuando está contraído */
+.sidebar.closed {
+  width: 80px; /* Ancho reducido */
+}
+
+/* Lista principal del sidebar */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Elementos de lista del sidebar */
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  transition: background 0.3s ease;
+}
+
+/* Hover en el item de lista - color gris claro */
+.sidebar ul li:hover {
+  background-color: #e6e6e6; /* Fondo gris claro en hover */
+}
+
+/* Estilos de los enlaces en el sidebar */
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333; /* Texto gris oscuro */
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+/* Iconos en los enlaces del sidebar */
+.sidebar ul li a svg {
+  font-size: 1.5rem;
+  margin-right: 20px;
+  color: #1A73E8; /* Azul vibrante para los iconos */
+  transition: margin 0.3s ease, color 0.3s ease;
+}
+
+/* Cambiar color del icono en hover */
+.sidebar ul li:hover a svg {
+  color: #0E2954; /* Azul oscuro en hover */
+}
+
+/* Cambiar color del texto en hover */
+.sidebar ul li:hover a {
+  color: #0E2954; /* Azul oscuro para el texto en hover */
+}
+
+/* Cuando el sidebar está contraído */
+.sidebar.closed ul li a svg {
+  margin-right: 0;
+}
+
+/* Ocultar el texto cuando el sidebar está cerrado */
+.sidebar.closed ul li a .sidebar-text {
+  display: none;
+}
+
+/* Mostrar el texto cuando el sidebar está abierto */
+.sidebar.open ul li a .sidebar-text {
+  display: inline;
+}
+
+/* Centrar iconos cuando el sidebar está cerrado */
+.sidebar.closed ul li a {
+  justify-content: center;
+}
+
+/* Estilo del texto en el sidebar */
+.sidebar-text {
+  font-size: 1rem;
+  transition: opacity 0.3s ease;
+}

@@ -1,0 +1,82 @@
+/* src/pages/BusinessSettings/BusinessSettings.css */
+.business-settings-container {
+  padding: 20px;
+  background-color: #f0f4f8; /* Fondo azul claro */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  max-width: 800px;
+  margin: 40px auto; /* Centrar en la página */
+}
+
+.business-settings-container h2 {
+  color: #0E2954; /* Azul oscuro */
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center; /* Centra el título */
+  border-bottom: 2px solid #1A73E8; /* Línea inferior en azul vibrante */
+  padding-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #b3cde0; /* Azul claro para el borde */
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #1A73E8; /* Azul vibrante en foco */
+  box-shadow: 0 0 5px rgba(26, 115, 232, 0.3);
+  outline: none;
+}
+
+.save-button {
+  background-color: #1A73E8; /* Azul vibrante */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s;
+  width: 100%; /* Botón de ancho completo */
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra */
+}
+
+.save-button:hover {
+  background-color: #0E2954; /* Azul oscuro en hover */
+  transform: translateY(-2px); /* Efecto de elevación en hover */
+}
+
+.save-button:active {
+  transform: translateY(0); /* Elimina la elevación en active */
+}
+
+@media (max-width: 768px) {
+  .business-settings-container {
+      padding: 15px;
+      max-width: 90%;
+  }
+}

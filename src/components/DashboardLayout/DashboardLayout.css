@@ -1,0 +1,66 @@
+/* Layout general */
+.dashboard-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Asegura que ocupe toda la pantalla */
+  z-index: 10; /* Evita que los elementos hijos sean limitados por un `z-index` más bajo */
+
+}
+
+/* Ajuste del contenedor del sidebar y contenido principal */
+.main-content-with-sidebar {
+  display: flex;
+  flex-grow: 1; /* Ocupa el espacio restante debajo del header */
+  overflow: hidden;
+}
+
+/* Sidebar expandido y colapsado */
+.sidebar {
+  background-color: #f8f9fa;
+  width: 240px;
+  transition: width 0.3s ease;
+}
+
+.sidebar.closed {
+  width: 60px;
+}
+
+/* Contenido principal */
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Ajuste de margen cuando el sidebar está abierto o cerrado */
+.main-content-with-sidebar .sidebar:not(.closed) + .main-content {
+  margin-left: 240px;
+}
+
+.main-content-with-sidebar .sidebar.closed + .main-content {
+  margin-left: 60px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px; /* Sidebar colapsado por defecto en pantallas pequeñas */
+  }
+
+  .main-content-with-sidebar .sidebar + .main-content {
+    margin-left: 60px;
+  }
+}
+.user-menu button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.user-menu button:hover {
+  background-color: #d32f2f;
+}

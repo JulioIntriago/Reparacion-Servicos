@@ -1,0 +1,63 @@
+/* Contenedor principal */
+.step-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+  }
+  
+  /* Título de la sección */
+  h2 {
+    font-size: 1.8rem;
+    color: #0E2954;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  /* Estilos del formulario */
+  .policies-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Área de texto para políticas */
+  .policies-textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: vertical;
+    background-color: #f0f4f8;
+  }
+  
+  .policies-textarea:focus {
+    border-color: #1A73E8;
+    box-shadow: 0 0 5px rgba(26, 115, 232, 0.2);
+    outline: none;
+  }
+  
+  /* Botón de finalizar */
+  .finish-button {
+    align-self: flex-end;
+    padding: 8px 16px; /* Tamaño reducido */
+    background-color: #1a73e8; /* Morado */
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .finish-button:hover {
+    background-color: #386fd4;
+  }
+  
